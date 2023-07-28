@@ -8,11 +8,11 @@ async function getInfo(year, round){
         const standings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings
     } else window.alert('Bad request')
 
-    // console.log(data)
+
     const name = data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.driverId;
 }
 
-// console.log(getInfo(2020, 1))
+
 function clearTable(){
     const tableBody = document.getElementById('standingsTable')
     tableBody.innerHTML=''
@@ -24,7 +24,6 @@ async function populateTable(event){
     const round = document.getElementById('round').value
 
     const result = await getInfo(year, round)
-    // console.log(result)
     const standings = result.MRData.StandingsTable.StandingsLists[0].DriverStandings
 
     const drivers = standings.slice(0, 7)
@@ -44,8 +43,6 @@ async function populateTable(event){
         winsCell.textContent = wins
         pointsCell.textContent = points
     })
-    // console.log(result.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.givenName)
-    // console.log(standings[0].givenName)
     console.log(drivers)
 }   
 
@@ -55,7 +52,4 @@ document.querySelector('form').addEventListener('submit', async (e)=>{
     populateTable()
 })
 
-
-
-// console.log(data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.driverId);
 
