@@ -1,0 +1,82 @@
+
+.background {
+    background-image: url(../Images/f1-race-car.avif);
+    background-size:110%;
+}
+
+
+table {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 200px;
+    border: solid;
+    border-radius: 12px;
+    backdrop-filter: blur(22px);
+    background-color: rgba(0, 0, 0, 0.26);
+    box-shadow: 10px 10px 8px black;
+}
+
+/* .blur {
+    box-shadow: 10px 10px 8px black;
+} */
+
+td, th {
+    padding: 15px;
+    border-bottom: 1px solid;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+}
+
+tr:hover {
+    background-color:rgba(255, 255, 0, 0.537);
+}
+/* 
+th {
+    text-align: center;
+}
+
+td { 
+    text-align: left;
+} */
+
+.data_row:hover {
+    background-color:yellow;
+}
+
+form {
+    position: relative;
+    top: 125px;
+    left: 25%;
+
+}
+
+input {
+    font-size: 28px;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+button {
+    font-size: 28px;
+    background-color: green;
+    color: white;
+    transition: 0.2s;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-image: url(../Images/checkered_flag.gif);
+    background-size: 110%;
+    color: transparent;
+    border: none;
+}
+
+/* REVISIT */
+button:active {
+    background-color: green;
+    transform: scale(0.9);
+}
